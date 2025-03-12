@@ -1,0 +1,20 @@
+# Archivos de estado de Terraform (contienen información sensible)
+terraform.tfstate
+terraform.tfstate.backup
+*.tfstate.*
+
+# Archivos de bloqueo y configuración local
+.terraform/
+.terraform.lock.hcl
+
+# Salidas de ejecución y registros
+crash.log
+*.tfplan
+*.log
+
+# Credenciales y archivos sensibles (si los usas)
+*.auto.tfvars
+*.auto.tfvars.json
+terraform.tfvars.json
+.env
+.idea
