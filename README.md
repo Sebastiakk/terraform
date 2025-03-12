@@ -43,10 +43,12 @@ Por temas de tiempo, no se pudo desarrollar una pequeña aplicación CRUD funcio
 
 2. Configurar las variables necesarias en `terraform.tfvars`:
     ```hcl
-    subscription_id = "tu_subscription_id"
-    location        = "eastus"
-    environment     = "dev"
-    app_name        = "nombre_de_tu_app"
+   tf_state_config = {
+      storage_account_name = "kiustate"
+      container_name       = "tfstate"
+      key                  = "dev.terraform.tfstate"
+      resource_group_name  = "tfstate-rg"
+    }
     ```
 
 3. Asegúrate de agregar el `SUBSCRIPTION_ID` en el `Makefile`:
